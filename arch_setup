@@ -1,0 +1,2 @@
+loadkeys no
+timedatectl set-timezone Europe/Oslo
