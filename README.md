@@ -10,7 +10,7 @@ loadkeys no
 timedatectl set-timezone Europe/Oslo
 ```
 
-## **2. Disk Partitioning**
+### **Disk Partitioning**
 
 ```bash
 fdisk /dev/nvme0n1
