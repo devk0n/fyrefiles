@@ -17,7 +17,7 @@ timedatectl set-timezone Europe/Oslo
 ```bash
 fdisk /dev/nvme0n1
 ```
-### **Delete previous partitions**
+#### **Delete previous partitions**
 THIS WILL DELETE ALL YOU DATA!
 1. Press `d` to delete partitions.
 2. Press `w` to write changes.
