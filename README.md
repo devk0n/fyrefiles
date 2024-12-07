@@ -57,3 +57,22 @@ fdisk /dev/nvme0n1
 
 ##### **Press `w` to write all changes**
 
+#### **Format the partitions**
+
+Create a Ext4 file system on root partition.
+```bash
+mkfs.ext4 /dev/nvme0n1p3
+```
+
+Initialize swap.
+```bash
+mkswap /dev/nvme0n1p2
+```
+
+Format EFI System to FAT32.
+```bash
+mkfs.fat -F 32 /dev/nvme0n1p1
+```
+
+
+
