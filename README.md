@@ -8,3 +8,11 @@
 ```bash
 loadkeys no
 timedatectl set-timezone Europe/Oslo
+
+Disk Partitioning
+
+fdisk /dev/nvme0n1
+
+    Press g to create a new GPT partition table.
+    Create Partitions:
+        Press n for a new partition.
