@@ -90,8 +90,10 @@ Enable swap.
 swapon /dev/nvme0n1p2
 ```
 
-
-
+## **Install essential packages**
+```bash
+pacstrap -K /mnt base linux linux-headers linux-firmware grub amd-ucode sudo nano nvidia nvidia-utils networkmanager
+```
 
 
 
