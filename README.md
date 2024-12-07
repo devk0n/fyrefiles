@@ -53,5 +53,5 @@ fdisk /dev/nvme0n1
 5. Press `t` to change partition type.
 6. Partition type `5` for `boot`.
 
-#### **Press `w to write all changes**
+##### **Press `w` to write all changes**
 
