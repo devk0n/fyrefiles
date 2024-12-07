@@ -27,6 +27,11 @@ fdisk /dev/nvme0n1
 7. Partition type `1` for `EFI System`.
 
 #### **Create `[SWAP]` partition**
-1. G
-2. 
+1. Press `n` for a new partition.
+2. Partition number `2` or `default`.
+3. Fisrt sector `default`.
+4. Last sector `+4G`.
+5. Press `t` to change partition type.
+6. Partition type `4` for `Swap`.
+7. 
 
