@@ -18,9 +18,9 @@ timedatectl set-timezone Europe/Oslo
 fdisk /dev/nvme0n1
 ```
 #### **Create /boot partition**
-* Press g to create a new GPT partition table.
-* Press n for a new partition.
-* Partition number 1.
-* First sector 2048.
-* Last sector +1G.
+1. Press g to create a new GPT partition table.
+2. Press n for a new partition.
+3. Partition number 1.
+4. First sector 2048.
+5. Last sector +1G.
 
