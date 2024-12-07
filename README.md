@@ -46,14 +46,14 @@ fdisk /dev/nvme0n1
 6. Partition number `2` or `default`.
 7. Partition type `19` for `Linux swap`.
 
-#### **Create `boot` partition**
+#### **Create `Linux root (x86-64)` partition**
 1. Press `n` for a new partition.
 2. Partition number `3` or `default`.
 3. First sector `default`.
 4. Last sector `default`.
 5. Press `t` to change partition type.
 6. Partition number `3` or `default`.
-7. Partition type `5` for `boot`.
+7. Partition type `23` for `Linux root (x86-64)`.
 
 ##### **Press `w` to write all changes**
 
