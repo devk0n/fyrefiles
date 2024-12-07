@@ -26,7 +26,7 @@ THIS WILL DELETE ALL YOU DATA!
 fdisk /dev/nvme0n1
 ``` 
 
-#### **Create `/boot` partition**
+#### **Create `EFI System` partition**
 1. Press `g` to create a new GPT partition table.
 2. Press `n` for a new partition.
 3. Partition number `1` or `default`.
@@ -35,12 +35,19 @@ fdisk /dev/nvme0n1
 6. Press `t` to change partition type.
 7. Partition type `1` for `EFI System`.
 
-#### **Create `[SWAP]` partition**
+#### **Create `Linux swap` partition**
 1. Press `n` for a new partition.
 2. Partition number `2` or `default`.
-3. Fisrt sector `default`.
+3. First sector `default`.
 4. Last sector `+4G`.
 5. Press `t` to change partition type.
 6. Partition type `4` for `Swap`.
-7. 
+
+#### **Create `boot` partition**
+1. Press `n` for a new partition.
+2. Partition number `3` or `default`.
+3. First sector `default`.
+4. Last sector `default`.
+5. Press `t` to change partition type.
+6. Partition type `5` for `boot`.
 
