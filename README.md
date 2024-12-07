@@ -1,5 +1,7 @@
 # **Arch Linux Installation and Hyprland Setup Guide**
 
+DISCLAMER! This is a guide for my personal setup for me to practice writing documentation and to recreate my setup when re-installing. DO NOT follow if you dont know what you're doing.
+
 ---
 
 ## **1. Install Arch Linux**
