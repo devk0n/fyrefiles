@@ -108,7 +108,8 @@ genfstab -U /mnt >> /mnt/etc/fstab
 Change root into the new system:
 ```bash
 arch-chroot /mnt
-``
+```
+
 
 
 
