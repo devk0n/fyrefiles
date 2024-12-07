@@ -74,5 +74,8 @@ Format EFI System to FAT32.
 mkfs.fat -F 32 /dev/nvme0n1p1
 ```
 
+### **Mount the file systems**
+
+
 
 
