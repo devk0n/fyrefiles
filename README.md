@@ -94,6 +94,21 @@ swapon /dev/nvme0n1p2
 ```bash
 pacstrap -K /mnt base linux linux-headers linux-firmware grub amd-ucode sudo nano nvidia nvidia-utils networkmanager
 ```
+## **Fstab**
+Fstab
+
+Generate an fstab file.
+
+```bash
+genfstab -U /mnt >> /mnt/etc/fstab
+```
+
+## **Chroot**
+
+Change root into the new system:
+```bash
+arch-chroot /mnt
+``
 
 
 
