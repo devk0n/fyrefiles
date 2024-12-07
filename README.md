@@ -105,7 +105,7 @@ Change root into the new system:
 ```bash
 arch-chroot /mnt
 ```
-## **Bootloader**
+## **2. Bootloader**
 Grub is installed now let's configure it.
 
 
