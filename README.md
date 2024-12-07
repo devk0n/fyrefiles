@@ -24,10 +24,6 @@ THIS WILL DELETE ALL YOU DATA!
 1. Press `d` to delete partitions.
 2. Press `w` to write changes.
 
-```bash
-fdisk /dev/nvme0n1
-``` 
-
 #### **Create `EFI System` partition**
 1. Press `g` to create a new GPT partition table.
 2. Press `n` for a new partition.
