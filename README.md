@@ -26,7 +26,7 @@ fdisk /dev/nvme0n1
 6. Press `t` to change partition type.
 7. Partition type `1` for `EFI System`.
 
-#### ** Create `[SWAP]` partition**
+#### **Create `[SWAP]` partition**
 1. G
 2. 
 
