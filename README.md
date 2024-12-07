@@ -75,9 +75,15 @@ mkfs.fat -F 32 /dev/nvme0n1p1
 ```
 
 ### **Mount the file systems**
+Mount the root volume to /mnt.
 ```bash
 mount /dev/nvme0n1p3 /mnt
-``
+```
+```bash
+mount --mkdir /dev/nvme0n1p1 /mnt/boot
+```
+
+
 
 
 
