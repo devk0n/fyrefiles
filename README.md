@@ -20,7 +20,13 @@ fdisk /dev/nvme0n1
 #### **Create `/boot` partition**
 1. Press `g` to create a new GPT partition table.
 2. Press `n` for a new partition.
-3. Partition number `1`.
-4. First sector `2048`.
+3. Partition number `1` or `default`.
+4. First sector `2048` or `default`.
 5. Last sector `+1G`.
+6. Press `t` to change partition type.
+7. Partition type `1` for `EFI System`.
+
+#### ** Create `[SWAP]` partition**
+1. G
+2. 
 
