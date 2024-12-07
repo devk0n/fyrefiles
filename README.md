@@ -15,6 +15,6 @@ timedatectl set-timezone Europe/Oslo
 ```bash
 fdisk /dev/nvme0n1
 ```
-    Press g to create a new GPT partition table.
-    Create Partitions:
-        Press n for a new partition.
+Press g to create a new GPT partition table.
+Create Partitions:
+Press n for a new partition.
