@@ -79,9 +79,17 @@ Mount the root volume to /mnt.
 ```bash
 mount /dev/nvme0n1p3 /mnt
 ```
+
+Mount the EFI system partition.
 ```bash
 mount --mkdir /dev/nvme0n1p1 /mnt/boot
 ```
+
+Enable swap.
+```bash
+swapon /dev/nvme0n1p2
+```
+
 
 
 
