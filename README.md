@@ -81,3 +81,6 @@ Generate GRUB configuration:
 
 # 2. Post-Installation Setup
 
+# 3. Hyprland Installation
+
+# 4. Customization and Tweaks
