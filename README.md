@@ -1,4 +1,4 @@
-**Arch Linux Installation and Hyprland Setup Guide**
+# **Arch Linux Installation and Hyprland Setup Guide**
 
 ***
 DISCLAIMER:
