@@ -79,5 +79,5 @@ Generate GRUB configuration:
 
 **Congratulation! Remove the installation media and launch into Arch Linux.**
 
-
+# 2. Post-Installation Setup
 
