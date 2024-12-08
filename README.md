@@ -1,113 +1,83 @@
 # **Arch Linux Installation and Hyprland Setup Guide**
 
----
+***
+DISCLAIMER:
+This is a guide for my personal setup for practice and to recreate my system when reinstalling. DO NOT follow this if you're not familiar with the process. Proceed at your own risk.
+***
 
-DISCLAMER! This is a guide for my personal setup for me to practice writing documentation and to recreate my setup when re-installing. DO NOT follow if you dont know what you're doing.
+# 1. Installing Arch Linux
+Create a Arch Linux USB installation media and boot into a live environment.
 
----
+## 1.1 Set Keyboard Layout and Timezone
 
-## **1. Install Arch Linux**
+    loadkeys no
+    timedatectl set-timezone Europe/Oslo
 
-### **Set Keyboard Layout and Timezone**
-```bash
-loadkeys no
-timedatectl set-timezone Europe/Oslo
-```
 
-### **Disk Partitioning**
+## 1.2 Disk Partitioning
+    fdisk /dev/nvme0n1
 
-```bash
-fdisk /dev/nvme0n1
-```
-#### **Delete previous partitions**
-THIS WILL DELETE ALL YOU DATA!
-1. Press `d` to delete partitions.
-2. Press `w` to write changes.
+### 1.2.1 Delete Previous Partitions
 
-#### **Create `EFI System` partition**
-1. Press `g` to create a new GPT partition table.
-2. Press `n` for a new partition.
-3. Partition number `1` or `default`.
-4. First sector `2048` or `default`.
-5. Last sector `+1G`.
-6. Press `t` to change partition type.
-7. Partition type `1` for `EFI System`.
+⚠️ This will delete all your data!
 
-#### **Create `Linux swap` partition**
-1. Press `n` for a new partition.
-2. Partition number `2` or `default`.
-3. First sector `default`.
-4. Last sector `+4G`.
-5. Press `t` to change partition type.
-6. Partition number `2` or `default`.
-7. Partition type `19` for `Linux swap`.
+Press `d` to delete partitions and `w` to write changes.
 
-#### **Create `Linux root (x86-64)` partition**
-1. Press `n` for a new partition.
-2. Partition number `3` or `default`.
-3. First sector `default`.
-4. Last sector `default`.
-5. Press `t` to change partition type.
-6. Partition number `3` or `default`.
-7. Partition type `23` for `Linux root (x86-64)`.
+### 1.2.2 Create Partitions
+1. EFI System Partition (1G):
+    * Press `g` to create a new GPT partition table.
+    * Press `n` for a new partition.
+    * Default values for partition number and first sector.
+    * Last sector: `+1G`.
+    * Press `t` to set partition type, and choose `1` for `EFI System`.
 
-##### **Press `w` to write all changes**
+2. Linux Swap Partition (4G):
+    * Press `n` for a new partition.
+    * Default values for partition number and first sector.
+    * Last sector: `+4G`.
+    * Press `t` to set partition type, and choose `19` for `Linux swap`.
 
-#### **Format the partitions**
+3. Linux Root Partition (Remaining Space):
+   * Press `n` for a new partition.
+   * Default values for partition number and sectors.
+   * Press `t` to set partition type, and choose `23` for `Linux root (x86-64)`.
 
-Create a Ext4 file system on root partition.
-```bash
-mkfs.ext4 /dev/nvme0n1p3
-```
+4. Press `w` to write all changes.
 
-Initialize swap.
-```bash
-mkswap /dev/nvme0n1p2
-```
+## 1.3 Formatting and Mounting Partitions
+    mkfs.ext4 /dev/nvme0n1p3   # Root
+    mkswap /dev/nvme0n1p2      # Swap
+    mkfs.fat -F 32 /dev/nvme0n1p1   # EFI System
 
-Format EFI System to FAT32.
-```bash
-mkfs.fat -F 32 /dev/nvme0n1p1
-```
+Mount partitions:
 
-### **Mount the file systems**
-Mount the root volume to /mnt.
-```bash
-mount /dev/nvme0n1p3 /mnt
-```
+    mount /dev/nvme0n1p3 /mnt
+    mount --mkdir /dev/nvme0n1p1 /mnt/boot
+    swapon /dev/nvme0n1p2
 
-Mount the EFI system partition.
-```bash
-mount --mkdir /dev/nvme0n1p1 /mnt/boot
-```
+## 1.4 Installing Essential Packages
+    pacstrap -K /mnt base linux linux-headers linux-firmware grub amd-ucode sudo nano nvidia nvidia-utils networkmanager
 
-Enable swap.
-```bash
-swapon /dev/nvme0n1p2
-```
+## 1.5 Generating Fstab
+    genfstab -U /mnt >> /mnt/etc/fstab
 
-## **Install essential packages**
-```bash
-pacstrap -K /mnt base linux linux-headers linux-firmware grub amd-ucode sudo nano nvidia nvidia-utils networkmanager
-```
-## **Fstab**
-Fstab
+## 1.6 Chroot into the System
+    arch-chroot /mnt
 
-Generate an fstab file.
+## 1.7 Installing the Bootloader
+Install GRUB:
 
-```bash
-genfstab -U /mnt >> /mnt/etc/fstab
-```
+    pacman -S grub efibootmgr
 
-## **Chroot**
+Install GRUB for UEFI:
 
-Change root into the new system:
-```bash
-arch-chroot /mnt
-```
-## **2. Bootloader**
-Grub is installed now let's configure it.
+    grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 
+Generate GRUB configuration:
+
+    grub-mkconfig -o /boot/grub/grub.cfg
+
+**Congratulation! Remove the installation media and launch into Arch Linux.**
 
 
 
