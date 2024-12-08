@@ -77,7 +77,7 @@ Generate GRUB configuration:
 
     grub-mkconfig -o /boot/grub/grub.cfg
 
-**Congratulation! Remove the installation media and launch into Arch Linux.**
+**Congratulation, Arch is now installed! Remove the installation media and launch into Arch Linux.**
 
 # 2. Post-Installation Setup
 
