@@ -83,4 +83,8 @@ Generate GRUB configuration:
 
 # 3. Hyprland Installation
 
+```bash
+sudo pacman -S hyprland-git
+```
+
 # 4. Customization and Tweaks
