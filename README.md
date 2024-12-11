@@ -143,6 +143,11 @@ Remove kms from the HOOKS array in /etc/mkinitcpio.conf and regenerate the initr
 
     mkinitcpio -P
 
+    GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 nvidia-drm.modeset=1"
+
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+
 # 3. Hyprland Installation
 
 ```bash
