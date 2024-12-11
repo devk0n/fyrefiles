@@ -134,7 +134,8 @@ Generate GRUB configuration:
     timedatectl set-ntp true
 
     sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-
+    cd ..
+    rm -rf yay/
 
 # 3. Hyprland Installation
 
