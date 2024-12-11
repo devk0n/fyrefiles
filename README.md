@@ -84,7 +84,7 @@ wireplumber
 ## 1.6 Chroot into the System
     arch-chroot /mnt
 
-    ln -sf /usr/share/zoneinfo/Europe/Rome /etc/localtime
+    ln -sf /usr/share/zoneinfo/Europe/Oslo /etc/localtime
 
     hwclock --systohc
 
