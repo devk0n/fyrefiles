@@ -56,6 +56,26 @@ Mount partitions:
     swapon /dev/nvme0n1p2
 
 ## 1.4 Installing Essential Packages
+base
+base-devel
+git
+linux-zen
+linux-zen-headers
+linux-firmware
+grub
+efibootmgr
+amd-ucode
+sudo
+nano
+nvidia-open-dkms
+nvidia-utils
+networkmanager
+pipewire
+pipewire-alsa
+pipewire-pulse
+pipewire-jack
+wireplumber
+
     pacstrap -K /mnt base base-devel git linux-zen linux-zen-headers linux-firmware grub efibootmgr amd-ucode sudo nano nvidia-open-dkms nvidia-utils networkmanager pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber
 
 ## 1.5 Generating Fstab
