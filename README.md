@@ -76,7 +76,7 @@ pipewire-pulse
 pipewire-jack
 wireplumber
 
-    pacstrap -K /mnt base base-devel git linux-zen linux-zen-headers linux-firmware grub efibootmgr amd-ucode sudo nano nvidia-open-dkms nvidia-utils networkmanager pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber
+    pacstrap -K /mnt base base-devel git linux-zen linux-zen-headers linux-firmware grub efibootmgr amd-ucode sudo nano nvidia-open-dkms nvidia-utils networkmanager pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber dunst
 
 ## 1.5 Generating Fstab
     genfstab -U /mnt >> /mnt/etc/fstab
@@ -121,9 +121,6 @@ EDITOR=nano visudo
 // Uncomment %wheel ALL=(ALL:ALL) ALL
 
 ## 1.7 Installing the Bootloader
-Install GRUB:
-
-    pacman -S grub efibootmgr
 
 Install GRUB for UEFI:
 
