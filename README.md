@@ -169,6 +169,7 @@ chmod +x .config/hypr/scripts/toggle_wofi.sh
 ## Pacman Tweaks
 
 Open `sudo nano /etc/pacman.conf` and uncomment the following:
+
     ParallelDownloads = 10
     Color
     VerbosePkgLists
