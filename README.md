@@ -84,6 +84,10 @@ wireplumber
 ## 1.6 Chroot into the System
     arch-chroot /mnt
 
+    ln -sf /usr/share/zoneinfo/Europe/Rome /etc/localtime
+
+    hwclock --systohc
+
 ## 1.7 Installing the Bootloader
 Install GRUB:
 
