@@ -154,4 +154,8 @@ Remove kms from the HOOKS array in /etc/mkinitcpio.conf and regenerate the initr
 sudo pacman -S hyprland-git
 ```
 
+    sudo nano /etc/modprobe.d/nvidia.conf
+
+    options nvidia_drm modeset=1 fbdev=1
+
 # 4. Customization and Tweaks
