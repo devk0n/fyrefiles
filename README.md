@@ -88,6 +88,11 @@ wireplumber
 
     hwclock --systohc
 
+    nano /etc/locale.gen
+
+en_US.UTF-8 UTF-8
+nb_NO.UTF-8 UTF-8
+
 ## 1.7 Installing the Bootloader
 Install GRUB:
 
