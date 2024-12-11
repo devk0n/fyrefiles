@@ -87,17 +87,20 @@ arch-chroot /mnt
 ```
 ```bash
 ln -sf /usr/share/zoneinfo/Europe/Oslo /etc/localtime
+hwclock --systohc
 ```
-    hwclock --systohc
 
     nano /etc/locale.gen
 
-en_US.UTF-8 UTF-8
-nb_NO.UTF-8 UTF-8
+Uncomment `en_US.UTF-8 UTF-8` and `nb_NO.UTF-8 UTF-8`.
 
-LANG=nb_NO.UTF-8
-LC_MESSAGES=en_US.UTF-8
-
+    nano /etc/locale.conf
+    
+    LANG=en_US.UTF-8
+    LC_TIME=nb_NO.UTF-8
+    LC_PAPER=nb_NO.UTF-8
+    LC_MESURMENTS=nb_NO.UTF-8    
+    
     nano /etc/vconsole.conf
     KEYMAP=no
 
