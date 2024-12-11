@@ -99,6 +99,15 @@ LC_MESSAGES=en_US.UTF-8
     nano /etc/vconsole.conf
     KEYMAP=no
 
+## 1.7 Hostname & Host setup
+    nano /etc/hostname
+    neon
+
+    nano /etc/hosts
+    127.0.0.1 localhost
+    ::1 localhost
+    127.0.0.1 neon
+
 ## 1.7 Installing the Bootloader
 Install GRUB:
 
