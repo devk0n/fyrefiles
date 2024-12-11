@@ -139,6 +139,8 @@ Generate GRUB configuration:
 
 Remove kms from the HOOKS array in /etc/mkinitcpio.conf and regenerate the initramfs.
 
+    mkinitcpio -P
+
 # 3. Hyprland Installation
 
 ```bash
