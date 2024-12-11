@@ -172,3 +172,5 @@ chmod +x .config/hypr/scripts/toggle_wofi.sh
     yay -S jetbrains-toolbox
 
     yay -S hyprpolkitagent-git
+
+    sudo pacman -S qt5-wayland qt6-wayland
