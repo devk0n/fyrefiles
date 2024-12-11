@@ -178,3 +178,5 @@ chmod +x .config/hypr/scripts/toggle_wofi.sh
     sudo pacman -S qt5-wayland qt6-wayland
 
     sudo pacman -S fastfetch
+
+    sudo pacman -S pavucontrol
