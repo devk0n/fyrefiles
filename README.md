@@ -170,3 +170,5 @@ chmod +x .config/hypr/scripts/toggle_wofi.sh
 
     sudo pacman -S firefox
     yay -S jetbrains-toolbox
+
+    yay -S hyprpolkitagent-git
