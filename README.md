@@ -106,7 +106,7 @@ LC_MESSAGES=en_US.UTF-8
     nano /etc/hosts
     127.0.0.1 localhost
     ::1 localhost
-    127.0.0.1 neon
+    127.0.1.1 neon.localdomain neon
 
 ## 1.7 Installing the Bootloader
 Install GRUB:
