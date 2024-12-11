@@ -108,6 +108,13 @@ LC_MESSAGES=en_US.UTF-8
     ::1 localhost
     127.0.1.1 neon.localdomain neon
 
+    useradd -m -G wheel -s /bin/bash username
+    passwd
+
+EDITOR=nano visudo
+
+// Uncomment %wheel ALL=(ALL:ALL) ALL
+
 ## 1.7 Installing the Bootloader
 Install GRUB:
 
