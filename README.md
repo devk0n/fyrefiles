@@ -131,6 +131,10 @@ Generate GRUB configuration:
 **Congratulation, Arch is now installed! Remove the installation media and launch into Arch Linux.**
 
 # 2. Post-Installation Setup
+    timedatectl set-ntp true
+
+    sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+
 
 # 3. Hyprland Installation
 
