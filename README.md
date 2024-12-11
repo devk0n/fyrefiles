@@ -159,3 +159,5 @@ sudo pacman -S hyprland-git
     options nvidia_drm modeset=1 fbdev=1
 
 # 4. Customization and Tweaks
+
+chmod +x .config/hypr/scripts/toggle_wofi.sh
