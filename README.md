@@ -171,5 +171,5 @@ chmod +x .config/hypr/scripts/toggle_wofi.sh
 
 # 5. Personal Applications (so I dont forget)
 
-    pacman -S firefox
+    sudo pacman -S firefox
     yay -S jetbrains-toolbox
