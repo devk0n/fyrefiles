@@ -188,3 +188,16 @@ Open `sudo nano /etc/pacman.conf` and uncomment the following:
     sudo pacman -S fastfetch
 
     sudo pacman -S pavucontrol
+
+## 5.1 EVIOCSKEYCODE Error Fix
+
+```bash
+<span style="color: red;">Failed to call EVIOCSKEYCODE with scan code 0x7c, and key code 190: Invalid argument</span>
+``` 
+
+    sudo cp /lib/udev/hwdb.d/60-keyboard.hwdb /etc/udev/hwdb.d/
+    sudo nano /etc/udev/hwdb.d/60-keyboard.hwdb
+
+`Control + F` and seach for either `7c` or `ASUS` and comment out `KEYBOARD_KEY_7c`.
+    
+    sudo systemd-hwdb update
