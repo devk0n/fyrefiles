@@ -192,7 +192,7 @@ Open `sudo nano /etc/pacman.conf` and uncomment the following:
 ## 5.1 EVIOCSKEYCODE Error Fix
 
 ```bash
-<span style="color: red;">Failed to call EVIOCSKEYCODE with scan code 0x7c, and key code 190: Invalid argument</span>
+event11: Failed to call EVIOCSKEYCODE with scan code 0x7c, and key code 190: Invalid argument
 ``` 
 
     sudo cp /lib/udev/hwdb.d/60-keyboard.hwdb /etc/udev/hwdb.d/
