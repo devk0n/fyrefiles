@@ -1,0 +1,267 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 16px;
+    min-height: 30px;
+
+}
+
+
+window#waybar {
+    background: rgba(21, 18, 27, 0);
+    color: #cad3f5;
+
+}
+
+
+#tooltip {
+    opacity: 0.9;
+    background: #24273a;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+
+}
+
+#tray {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 8px;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid #cad3f5;
+}
+
+#custom-gpu-usage {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#bluetooth {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 8px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#custom-firefox {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px 0px 0px 0px;
+    border-top: 2px solid #cad3f5;
+    border-bottom: 2px solid #cad3f5;
+}
+
+#custom-kitty {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px 0px 0px 0px;
+    border-top: 2px solid #cad3f5;
+    border-bottom: 2px solid #cad3f5;
+}
+
+#custom-vscodium {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px 0px 0px 0px;
+    border-top: 2px solid #cad3f5;
+    border-bottom: 2px solid #cad3f5;
+}
+
+#custom-thunar {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px 0px 0px 0px;
+    border-top: 2px solid #cad3f5;
+    border-bottom: 2px solid #cad3f5;
+}
+
+#custom-logitech_battery {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px 0px 0px 0px;
+    border-top: 2px solid #cad3f5;
+    border-bottom: 2px solid #cad3f5;
+}
+
+#custom-arctis_battery {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px 0px 0px 0px;
+    border-top: 2px solid #cad3f5;
+    border-bottom: 2px solid #cad3f5;
+}
+
+#pulseaudio {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 10px 0px 0px 10px;
+    border: 2px solid #cad3f5;
+    border-right: none;
+}
+
+#custom-updates {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px 0px 0px 0px;
+    border: 2px solid #cad3f5;
+    border-right: none;
+    border-left: none;
+}
+
+#network {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 8px;
+    border-radius: 0px 10px 10px 0px;
+    border: 2px solid #cad3f5;
+    border-left: none;
+}
+
+#memory {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px 0px 0px 0px;
+    border-top: 2px solid #cad3f5;
+    border-bottom: 2px solid #cad3f5;
+}
+#cpu {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px 10px 10px 0px;
+    border: 2px solid #cad3f5;
+    border-left: none;
+}
+#custom-launcher {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 8px;
+    margin-right: 0px;
+    border-radius: 10px 0px 0px 10px;
+    border: 2px solid #cad3f5;
+    border-right: none;
+    transition: background 0.4s ease, transform 0.4s ease;
+}
+#clock {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid #cad3f5;
+    transition: background 0.4s ease, transform 0.4s ease;
+}
+
+#clock:hover {
+    background: rgba(202, 211, 245, 0.75);
+    color: rgba(36, 39, 58, 1);
+}
+
+#custom-launcher:hover, #cpu:hover, #memory:hover,
+#network:hover, #custom-updates:hover, #pulseaudio:hover,
+#custom-arctis_battery:hover, #custom-logitech_battery:hover,
+#custom-thunar:hover, #custom-firefox:hover,
+#custom-vscodium:hover, #custom-kitty:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+#custom-divider {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px 0px 0px 0px;
+    border-top: 2px solid #cad3f5;
+    border-bottom: 2px solid #cad3f5;
+}
+
+#custom-divider-updates {
+    background: rgba(36, 39, 58, 0.75);
+    opacity: 0.9;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px 0px 0px 0px;
+    border-top: 2px solid #cad3f5;
+    border-bottom: 2px solid #cad3f5;
+}

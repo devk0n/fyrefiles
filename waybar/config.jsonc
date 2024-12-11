@@ -1,0 +1,166 @@
+{
+    "layer": "top",
+    "position": "top",
+    "output": "DP-1",
+    "exclusive": "true",
+    "passthrough": "false",
+    "height": "20",
+    //"modules-left": [
+    //    "custom/launcher",
+    //    "custom/divider",
+    //   "custom/logitech_battery",
+    //    "custom/arctis_battery",
+    //    "custom/divider",
+    //   "memory",
+    //    "cpu"
+    //],
+    "modules-center": [
+        "clock"
+    ],
+    //"modules-right": [
+    //    "pulseaudio",
+    //    "custom/divider-updates",
+    //    "custom/updates",
+    //    "custom/divider",
+    //    "network"
+    //],
+    "custom/firefox": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "firefox"
+    },
+    "custom/kitty": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "kitty"
+    },
+    "custom/vscodium": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "codium"
+    },
+    "custom/thunar": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "thunar"
+    },
+    "custom/logitech_battery": {
+        "format": "󰍽 {}",
+        "tooltip": false,
+        "exec": "/home/devkon/.config/waybar/scripts/logitech-battery.sh",
+        "on-click": "/home/devkon/.config/waybar/scripts/logitech-battery.sh",
+        "interval": 5
+    },
+    "custom/arctis_battery": {
+        "format": " {}",
+        "tooltip": false,
+        "exec": "/home/devkon/.config/waybar/scripts/arctis-battery.sh",
+        "on-click": "/home/devkon/.config/waybar/scripts/arctis-battery.sh",
+        "interval": 5
+    },
+    "clock": {
+        "format": " {:%a, %e %b, %H:%M:%S }",
+        "interval": 1
+    },
+    "custom/gpu-usage": {
+        "exec": "radeontop -d --limit 1 -i 4 - | cut -c 32-35 -",
+        "format": "{}%  GPU",
+        "return-type": "",
+        "interval": 4,
+        "on-click": "kitty htop"
+    },
+    "custom/launcher": {
+        "tootltip": false,
+        "format": " 󰣇",
+        "on-click": "killall rofi || rofi -show drun -n",
+        "on-click-right": "vscodium /home/devkon/.config /home/devkon/.config/hypr/hyprland.conf"
+    },
+    "cpu": {
+        "interval": 5,
+        "format": " {usage}% ",
+        "exec": "top -bn1 | grep 'Cpu(s)' | awk '{print 100 - $8}'",
+        "on-click": "kitty htop"
+    },
+    "memory": {
+        "interval": 5,
+        "format": " {used} GiB",
+        "exec": "free | awk '/Mem:/ {print $3 \"/\" $2 \" MiB (\" int($3/$2 * 100) \"%\" )\"}'",
+        "on-click": "kitty htop"
+    },
+    "network": {
+        "interval": 100,
+        //"interface": "wlp2s0",
+        "format": "{ifname}",
+        "format-wifi": "  {essid} ({signalStrength}%) ",
+        "format-ethernet": " {ipaddr}/{cidr} ",
+        "format-disconnected": "Disconnected ",
+        //An empty format will hide the module.
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format-wifi": " {essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": " {ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "exec": "kitty -e nmcli dev wifi ",
+        "on-click-right": "kitty systemctl stop openvpn-client@no.protonvpn.udp.service",
+        //"on-click": "kitty systemctl start openvpn-client@no.protonvpn.udp.service"
+        "on-click": "nm-connection-editor"
+    },
+    "custom/updates": {
+        "format": "{} Update(s)",
+        "exec": "yay -Qu | wc -l",
+        "exec-if": "yay -Qu | grep -q '.'",
+        "interval": 200,
+        "on-click": "kitty -e yay -Syu && notify-send 'The system has been updated'"
+    },
+    "custom/divider-updates": {
+        "format": "|",
+        "exec": "echo '|'",
+        "exec-if": "yay -Qu | wc -l | grep -q '[1-9]'",
+        "interval": 200
+    },
+    "pulseaudio": {
+        "format": " {icon}  {volume}%",
+        "tooltip": false,
+        "format-muted": " Muted",
+        "on-click": "pavucontrol",
+        "scroll-step": 5,
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        }
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon}  {capacity}% ",
+        "format-charging": " {capacity}% ",
+        "format-plugged": " {capacity}% ",
+        "format-alt": "{time} {icon} ",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "custom/temp": {
+        "exec": "$HOME/.config/waybar/temp.py",
+        "format": "{}",
+        "tooltip": true,
+        "interval": 20
+    },
+    "custom/divider": {
+        "format": "|"
+    }
+}
