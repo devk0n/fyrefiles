@@ -76,7 +76,7 @@ pipewire-pulse
 pipewire-jack
 wireplumber
 
-    pacstrap -K /mnt base base-devel git linux-zen linux-zen-headers linux-firmware grub efibootmgr amd-ucode sudo nano nvidia-open-dkms nvidia-utils networkmanager pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber dunst
+    pacstrap -K /mnt base base-devel git linux-zen linux-zen-headers linux-firmware grub efibootmgr amd-ucode sudo nano nvidia-open-dkms nvidia-utils networkmanager pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber
 
 ## 1.5 Generating Fstab
     genfstab -U /mnt >> /mnt/etc/fstab
@@ -170,6 +170,8 @@ chmod +x .config/hypr/scripts/toggle_wofi.sh
 
     sudo pacman -S firefox
     yay -S jetbrains-toolbox
+
+    sudo pacman -S dunst libnotify
 
     yay -S hyprpolkitagent-git
 
