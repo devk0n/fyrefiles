@@ -82,10 +82,12 @@ wireplumber
     genfstab -U /mnt >> /mnt/etc/fstab
 
 ## 1.6 Chroot into the System
-    arch-chroot /mnt
-
-    ln -sf /usr/share/zoneinfo/Europe/Oslo /etc/localtime
-
+```bash
+arch-chroot /mnt
+```
+```bash
+ln -sf /usr/share/zoneinfo/Europe/Oslo /etc/localtime
+```
     hwclock --systohc
 
     nano /etc/locale.gen
