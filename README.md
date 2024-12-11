@@ -160,4 +160,7 @@ sudo pacman -S hyprland-git
 
 # 4. Customization and Tweaks
 
+    pacman -S waybar wofi hyprpaper
+
 chmod +x .config/hypr/scripts/toggle_wofi.sh
+
