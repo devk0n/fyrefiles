@@ -189,6 +189,8 @@ Open `sudo nano /etc/pacman.conf` and uncomment the following:
 
     sudo pacman -S pavucontrol
 
+    sudo pacman -S glfw
+
 ## 5.1 EVIOCSKEYCODE Error Fix
 
 ```bash
