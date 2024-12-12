@@ -193,6 +193,8 @@ Open `sudo nano /etc/pacman.conf` and uncomment the following:
 
     yay -S imgui
 
+    yay -S eww-git
+
 ## 5.1 EVIOCSKEYCODE Error Fix
 
 ```bash
