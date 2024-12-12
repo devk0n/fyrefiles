@@ -191,6 +191,8 @@ Open `sudo nano /etc/pacman.conf` and uncomment the following:
 
     sudo pacman -S glfw glew
 
+    yay -S imgui
+
 ## 5.1 EVIOCSKEYCODE Error Fix
 
 ```bash
