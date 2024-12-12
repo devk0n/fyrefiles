@@ -2,7 +2,7 @@
 
 ***
 DISCLAIMER:
-This is a guide for my personal setup for practice and to recreate my system when reinstalling. DO NOT follow this if you're not familiar with the process. Proceed at your own risk.
+This is a guide for my personal setup, it may not work for your setup. Proceed at your own risk.
 ***
 
 # 1. Installing Arch Linux
