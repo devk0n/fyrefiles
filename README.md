@@ -180,7 +180,7 @@ Open `sudo nano /etc/pacman.conf` and uncomment the following:
 
 Edit ExecStart to this:
 
-    ExecStart=-/sbin/agetty --autologin devkon --noclear %I $TERM
+    ExecStart=-/usr/bin/agetty --autologin devkon --noclear %I $TERM
 
 Then execute the following commands:
 
