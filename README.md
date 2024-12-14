@@ -175,7 +175,7 @@ Open `sudo nano /etc/pacman.conf` and uncomment the following:
     VerbosePkgLists
 
 ## 4.2 Autologin & Hyprland launch
-
+### Autologin
     sudo cp /usr/lib/systemd/system/getty@.service /etc/systemd/system/autologin@.service
 
 Edit ExecStart to this:
@@ -187,6 +187,17 @@ Then execute the following commands:
     sudo systemctl daemon-reload
     sudo systemctl enable autologin@tty1.service
     sudo systemctl start autologin@tty1.service
+
+### Hyprland Launch
+
+    sudo nano ~/.bash_profile
+
+And add the following:
+
+    # Auto-start Hyprland on TTY1
+    if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
+        exec Hyprland
+    fi
 
 # 5. Personal Applications (so I dont forget)
 
