@@ -174,6 +174,10 @@ Open `sudo nano /etc/pacman.conf` and uncomment the following:
     Color
     VerbosePkgLists
 
+## 4.2 Autologin & Hyprland launch
+
+    sudo cp /usr/lib/systemd/system/getty@.service /etc/systemd/system/autologin@.service
+
 # 5. Personal Applications (so I dont forget)
 
     sudo pacman -S firefox
