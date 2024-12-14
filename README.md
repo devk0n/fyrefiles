@@ -178,6 +178,16 @@ Open `sudo nano /etc/pacman.conf` and uncomment the following:
 
     sudo cp /usr/lib/systemd/system/getty@.service /etc/systemd/system/autologin@.service
 
+Edit ExecStart to this:
+
+    ExecStart=-/sbin/agetty --autologin devkon --noclear %I $TERM
+
+Then execute the following commands:
+
+    sudo systemctl daemon-reload
+    sudo systemctl enable autologin@tty1.service
+    sudo systemctl start autologin@tty1.service
+
 # 5. Personal Applications (so I dont forget)
 
     sudo pacman -S firefox
