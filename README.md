@@ -214,4 +214,3 @@ event11: Failed to call EVIOCSKEYCODE with scan code 0x7c, and key code 190: Inv
 - [ ] Configure waybar or eww
 - [ ] Configure wofi
 - [X] Configure Hyprland
-- [ ] 
