@@ -207,3 +207,11 @@ event11: Failed to call EVIOCSKEYCODE with scan code 0x7c, and key code 190: Inv
 `Control + F` and seach for either `7c` or `ASUS` and comment out `KEYBOARD_KEY_7c`.
     
     sudo systemd-hwdb update
+
+## 6. TODO
+
+- [ ] Configure kitty
+- [ ] Configure waybar or eww
+- [ ] Configure wofi
+- [X] Configure Hyprland
+- [ ] 
