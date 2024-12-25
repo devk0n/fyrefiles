@@ -241,3 +241,6 @@ event11: Failed to call EVIOCSKEYCODE with scan code 0x7c, and key code 190: Inv
 - [X] Configure Hyprland
 - [ ] Fix README
 - [ ] Configure dunst
+
+## 7. Dual Boot
+
